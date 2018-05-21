@@ -15,4 +15,4 @@ Module 2 pair project at Ironhack. Express App + mongoose
 * see an event details
 
 ## The app was deployed and can be accessed online here:
-https://live-beats.herokuapp.com/
+https://live-beats-2.herokuapp.com/
