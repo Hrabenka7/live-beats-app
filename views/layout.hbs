@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>liveBeats!</title>
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel='stylesheet' href='/stylesheets/style.css' />
+</head>
+
+<body>
+<header>
+  <nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+
+      {{!--  logo --}}
+      <div class="navbar-header">
+        {{!-- <a class="navbar-brand" href="/">Live Beats!</a> --}}
+        <img src="/images/logo3b.png" class="logo">
+      </div>
+
+      {{!--   links --}}
+      <ul class="nav navbar-nav">
+        <li>
+          <a href="/">Home</a>
+        </li>
+
+        <li>
+          <a href="/event/list">Events</a>
+        </li>
+
+        <li>
+          <a href="/#search">Search</a> 
+        </li>
+      </ul>
+
+     {{!-- signup/login --}}
+      <ul class="nav navbar-nav navbar-right">
+        {{#unless user}}
+        <li>
+          <a href="/auth/signup">
+            <span class="glyphicon glyphicon-user"></span> Sign Up</a>
+        </li>
+        <li>
+          <a href="/auth/login">
+            <span class="glyphicon glyphicon-log-in"></span> Login</a>
+        </li>
+        {{/unless}} 
+
+     {{!--  name/logout   --}}
+        {{#if user}}
+        <li>
+          <a class="header-barname">{{user.barname}}</a>
+        </li>
+        <li>
+          <a>
+            <form method="POST" action="/auth/logout">
+              <button>
+                <span class="glyphicon glyphicon-log-out">Logout</span> 
+              </button>
+            </form>
+          </a>
+        </li>
+        {{/if}}  
+      </ul>
+    </div>
+  </nav>
+</header>
+
+{{!--   <div class="container"> --}}
+    {{{body}}}
+ {{!--  </div> --}}
+    
+  <footer class="container-fluid footer text-center">
+    <p>  &copy Marketa & Jenny </p>
+  </footer>
+  
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.18.0/axios.min.js"></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC5QAZSVrFeysvM4mzNnNSP8As2ZLmiSF4"></script>
+{{!-- <script src="https://unpkg.com/axios/dist/axios.min.js"></script> --}}
+<script src="/js/main.js"></script>
+</body>
+
+
+</html>

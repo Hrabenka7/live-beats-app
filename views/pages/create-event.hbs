@@ -1,0 +1,49 @@
+<div id="img-create">
+
+<div class="col-md-12" id="main-form">
+
+  <div class="form">
+
+    <form method="POST" action="/event/create">
+    
+      <div class="form-group">
+        <label>Event name</label>
+        <input type="text" class="form-control" name="title" />
+      </div>
+
+      <div class="form-group">
+        <label>Type of music</label>
+        <select name='musicType' class='form-control'>
+          <option value='classic'>Classic</option>
+          <option value='jazz'>Jazz</option>
+          <option value='pop'>Pop</option>
+          <option value='rap'>Rap</option>
+          <option value='rock'>Rock</option>
+          <option value='other'>Other</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label>Description</label>
+        <textarea type="text" class="form-control" name="description"></textarea> </textarea>
+      </div>
+
+      {{#if errorMessage}}
+      <div class="error">
+        {{errorMessage}}
+      </div>
+      {{/if}}
+
+      <div class="text-center">
+        <button type="submit" class="btn btn-add">
+          <span class="glyphicon glyphicon"></span>Add event
+        </button>
+      </div>
+
+    </form>
+  </div>
+</div>
+
+</div>
+
+<div class="lennie"></div>

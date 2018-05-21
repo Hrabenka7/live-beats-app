@@ -1,0 +1,58 @@
+<div id="img-details">
+
+<div class="container" id="details">
+
+  <table class='table table-hover table-responsive'>
+
+    <thead class="thead-dark">
+      <tr>
+        <th id="event-header" colspan="4" scope="colgroup">Event details</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row">Title</th>
+        <td>{{event.title}}</td>
+      </tr>
+      <tr>
+        <th scope="row">Type of music</th>
+        <td>{{event.musicType}}</td>
+      </tr>
+      <tr>
+        <th scope="row">Description</th>
+        <td>{{event.description}}</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <table class='table table-hover table-responsive table-bordered'>
+
+    <thead class="thead-dark">
+      <tr>
+        <th id="event-header" colspan="4" scope="colgroup">Bar info</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row">Bar name</th>
+        <td>{{event.bar.barname}}</td>
+      </tr>
+      <tr>
+        <th scope="row">Location</th>
+        <td>{{event.bar.location.coordinates}}</td>
+      </tr>
+      <tr>
+        <th scope="row">Phone</th>
+        <td>{{event.bar.phone}}</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="todo text-center">
+    <h2> One day there will be a map with location</h2>
+  </div>
+</div>
+</div>
+
+
+<div class="lennie"></div>

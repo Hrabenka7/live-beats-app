@@ -1,0 +1,70 @@
+<div id="img-events">
+  <div class="container">
+    <div class="text-center text-list">
+      <div class="todo text-center">
+        <h2> This page is currently under construction</h2>
+      </div>
+      <h1> List of Events </h1>
+    </div>
+    <table class='table table-hover table-responsive table-bordered' align="center">
+      <tbody>
+        <ul>
+          {{#each events}} {{!-- key from event.js --}}
+          <thead>
+            <tr>
+              <th id="event-header" colspan="4" scope="colgroup">Event info</th>
+            </tr>
+          </thead>
+          <div class="each-event">
+            <tr>
+              <th scope="row">Title</th>
+              <td>{{this.title}}</td>
+            </tr>
+
+            <tr>
+              <th scope="row">Type of music</th>
+              <td>{{this.musicType}}</td>
+            </tr>
+
+            <tr>
+              <th scope="row">Description</th>
+              <td>{{this.description}}</td>
+            </tr>
+
+
+            <tr>
+              <div id="see-details">
+                <th scope="row">
+                  <a href="/event/event-details/{{this._id}}">See details</a>
+                </th>
+                  </div>
+              </tr>
+            </div>
+            {{/each}}
+          </ul>
+        </tbody>
+      </table>
+              </div>
+            </tr>
+
+            
+        {{!--     <tr>
+              <th scope="row">
+                <td>
+                  <a href="/event/event-details/{{this._id}}">See details</a>
+              </th>
+              </td>
+            </tr> 
+
+          </div>
+
+          {{/each}}
+        </ul>
+      </tbody>
+    </table> --}}
+
+  </div>
+  </body>
+</div>
+
+<div class="lennie"></div>

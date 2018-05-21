@@ -1,0 +1,51 @@
+<div id="img-sign">
+  <!-- image is from Subtle Patterns -->
+
+
+<div class="col-md-12" id="main-form">
+  <div class="form">
+    <form method="POST" action="/auth/signup">
+
+      <div class="form-group">
+        <label>Bar name:</label>
+        <input type="text" class="form-control" id="barname" name="barname">
+      </div>
+
+      <div class="form-group">
+        <label>Password:</label>
+        <input type="password" class="form-control" id="pwd" name="password">
+      </div>
+
+      <div class="form-group">
+        <label>Longitude:</label>
+        <input type="text" class="form-control" id="lng" name="lng">
+      </div>
+
+      <div class="form-group">
+        <label>Latitude:</label>
+        <input type="text" class="form-control" id="lat" name="lat">
+      </div>
+
+      <div class="form-group">
+        <label>Phone number:</label>
+        <input type="number" class="form-control" id="phone" name="phone">
+      </div>
+
+      {{#if errorMessage}}
+
+      <div class="error">
+        {{errorMessage}}
+      </div>
+
+      {{/if}}
+      <div class="text-center">
+        <button type="submit" class="btn btn-signup">
+          <span class="glyphicon glyphicon"></span>Sign-up
+        </button>
+      </div>
+    </form>
+  </div>
+</div>
+
+</div>
+<div class="lennie"></div>

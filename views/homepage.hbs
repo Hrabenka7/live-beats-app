@@ -1,0 +1,68 @@
+<div class="jumbotron">
+
+  <div class="jumbotron-text">
+
+    <h1>
+      <span class="capital">W</span>elcome to the biggest
+      <br> bar gigs platform
+      <br> in Barcelona
+    </h1>
+
+    <h3>Something's going on at your venue?</h3>
+
+    <button type="button" class="btn btn-info btn-lg">
+      <a href="/event/create">Let the world know</a>
+    </button>
+
+  </div>
+</div>
+
+<div id="search" class="text-center">
+
+  <h1>Find the good vibes</h1>
+  <tr>
+    <div class="field">
+      <label><h3>Pick your music taste :</h3></label>
+        <td>
+          <select name='musicType' class='selectpicker' id="selectpicker">
+            <option value='classic'>Classic</option>
+            <option value='jazz'>Jazz</option>
+            <option value='pop'>Pop</option>
+            <option value='rap'>Rap</option>
+            <option value='rock'>Rock</option>
+            <option value='other'>Other</option>
+          </select>
+        </td>
+        <td>
+          <button type="submit" id="btn-search" class="btn btn-search">
+            <span class="glyphicon glyphicon"></span>Search
+          </button>
+          </td>
+    </div>
+  </tr>
+
+  <div class="searchList">
+    
+    <ul>
+      {{#each searchedEvent}} {{!-- key from index.js --}}
+      <div class="each-event">
+        <li>
+          <p>
+            <b>Title:</b> {{this.title}}</p>
+          <p>
+            <b>Type of music:</b> {{this.musicType}}</p>
+          <p>
+            <b>Description:</b> {{this.description}}</p>
+          <a href="/event/event-details/{{this._id}}">See details</a>
+        </li>
+      </div>
+  
+      {{/each}}
+    </ul> 
+  </div>
+
+</div>
+
+<div id="map"></div>
+
+<div class="lennie"></div>
